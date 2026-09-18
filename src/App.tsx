@@ -3,7 +3,7 @@ import Nav from "./components/Nav";
 
 import Banner from "./components/Banner";
 
-function App() {
+function App()  {
   
   return (
     <>
@@ -11,6 +11,6 @@ function App() {
      <Banner/>
     </>
   )
-}
+};
 
-export default App
+export default App;
