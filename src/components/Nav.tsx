@@ -1,5 +1,5 @@
 
-
+import logo from "../assets/logo-text.png";
 
 const Nav =() => {
    
@@ -16,7 +16,7 @@ return (
 </button>
 {/* logo */}
 <a href="#home" className="md:flex-1">
-    <img src="./assets/logo-text.png" alt="" className="h-10" />
+    <img src={logo} alt="" className="h-10" />
     
 </a>
  {/* nav for pc */}
