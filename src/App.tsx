@@ -1,16 +1,81 @@
 
+import {useState} from "react";
+import {toast, ToastContainer} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import Nav from "./components/Nav";
 
 import Banner from "./components/Banner";
-import TechCard from "./components/TechCard";
+// import TechCard from "./components/TechCard";
+import Technologies from "./components/Technologies";
+import Stack from "./components/Stack";
+interface Technology {
+    id: number;
+    name: string;
+    category: string; 
+    description: string;
+    icon: string;
+rating : number;
+difficulty: string;
+badge: string;
+}
 
-function App()  {
+const App = () => {
+  const [stack, setStack]= useState <Technology[]>([]);
+
+const addToStack = (technology : Technology)=>{
+  const alreadyAdded = stack.some(
+    (item) => item.id === technology.id
+  );
+if(alreadyAdded){
+  toast.warning (
+    `${technology.name} is already in your stack`
+  );
+  return;
+}
+setStack ([...stack, technology]);
+
+toast.success(`${technology.name} added to your stack `
   
+);
+};
+const removeFromStack = (technology : Technology)=> {
+   setStack(
+    stack.filter((item)=> item.id !== technology.id)
+   );
+   toast.info(`${technology.name} removed from your stack `
+
+   );
+  };
+  // Remove all technologies
+  const removeAll= () => {
+    if(stack.length === 0){
+      toast.info ("Your Stack is already empty");
+      return;
+    }
+    setStack([]);
+    toast.info("All technologies removed from your stack");
+  };
+
   return (
     <>
     <Nav/>
      <Banner/>
-    <TechCard technology ="React" onAdd={() => {}} />
+     <div className="grid grid-cols-1 gap-8 px-8 py-10 lg:grid-cols-[1fr_320px]">
+
+      <Technologies 
+      stack={stack}
+      onAdd={addToStack}/>
+     
+    {/* <TechCard technology ="React" onAdd={() => {}} /> */}
+      
+      <Stack
+      stack={stack}
+      onRemove={removeFromStack}
+      onRemoveAll={removeAll}/></div>
+      < ToastContainer
+      position="top-right"
+      autoClose={2500}/>
     </>
   )
 };
