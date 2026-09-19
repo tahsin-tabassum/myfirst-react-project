@@ -10,7 +10,7 @@ function App()  {
     <>
     <Nav/>
      <Banner/>
-     <TechCard/>
+    <TechCard technology ="React" onAdd={() => {}} />
     </>
   )
 };

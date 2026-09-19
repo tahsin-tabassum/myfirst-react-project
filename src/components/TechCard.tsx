@@ -11,10 +11,11 @@ badge: string;
 interface TechnoCardProps {
 technology: Technology;
 onAdd: (technology: Technology) => void;
+isAdded: boolean;
 }
 
 
-const TechCard =({technology, onAdd,}:TechnoCardProps) => {
+const TechCard =({technology, onAdd, isAdded,}:TechnoCardProps) => {
    
     
 return (
@@ -26,10 +27,12 @@ return (
 {/* badge */}
 <span className="rounded-full bg-pink-100 px-3 py-1 text-xs font-medium text-pink-600">{technology.badge}</span>
         </div>
+
         {/* name */}
-        <h3 className="mt-5 text-xl font-semibold text-gray-900"></h3>
+        <h3 className="mt-5 text-xl font-semibold text-gray-900">{technology.name}</h3>
         {/* des */}
         <p className="mt-2 text-sm leading-6  text-gray-500">{technology.description}</p>
+
         <div className="mt-4 flex items-center gap-2">
 <span className="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-600">{technology.category}</span>
 
@@ -44,11 +47,15 @@ return (
         {/* button */}
         <button
 
-        onClick={()=> onAdd(technology)} className="mt-5 w-full rounded-full bg-linear-to-r from-[#F97316] to-[#EC4899] px-4 py-3 text-sm font-medium text-white" >
-       Add to Stack </button>
+        onClick={()=> onAdd(technology)}
+        disabled={isAdded}
+         className={`mt-5 w-full rounded-full bg-linear-to-r from-[#F97316] to-[#EC4899] px-4 py-3 text-sm font-medium text-white"${isAdded
+            ? 'cursor-not-allowed bg-gray-400'
+            : "bg-linear-to-r from-[#F97316] to-[#EC4899]"}`}>
+       {isAdded?"✓ Add to Stack": "Add to Stack" } </button>
         
     </div>
-)
+);
 };
 
 
