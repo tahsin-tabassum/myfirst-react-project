@@ -1,5 +1,6 @@
+import { useEffect, useState  } from "react";
 import TechCard from "./TechCard"; 
-import technologies from "../public/technologies";
+
 
 interface Technology {
     id: number;
@@ -20,6 +21,16 @@ interface TechnoProps {
 
 
 const Technologies = ({ stack, onAdd,} : TechnoProps)=> {
+    const [technologies, setTechnologies] = useState<Technology []>([]);
+
+    useEffect(()=>
+    {
+        fetch("/public/technologies.json")
+        .then((response)=> response.json())
+        .then((data)=> setTechnologies(data));
+    },[]);
+    
+    
     return(
         <section id="technologies" className="px-8 py-16">
 <div className="mb-10 text-center">
