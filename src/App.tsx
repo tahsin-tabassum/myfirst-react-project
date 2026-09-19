@@ -2,6 +2,7 @@
 import Nav from "./components/Nav";
 
 import Banner from "./components/Banner";
+import TechCard from "./components/TechCard";
 
 function App()  {
   
@@ -9,6 +10,7 @@ function App()  {
     <>
     <Nav/>
      <Banner/>
+     <TechCard/>
     </>
   )
 };
