@@ -18,15 +18,12 @@ interface StackProps {
 }
 const Stack = ({stack, onRemove, onRemoveAll}: StackProps)=> {
     return(
-        <aside className="rounded-2xl border border-gray-200 bg-white p-6">
+        <aside className="h-fit border border-gray-200 bg-white p-6 shadow-sm">
 
-
-<div className="flex items-center justify-between">
     <h2 className="text-xl font-bold text-gray-900">Your Stack</h2>
 <span className="text-sm text-gray-500">
-    {stack.length}No Technology Selected
+    {stack.length} No Technology Selected
 </span>
-</div>
 
 {stack.length===0 ?(
 <p className="mt-8 text-center text-sm text-gray-500"> Your stack is empty.</p>

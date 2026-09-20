@@ -61,22 +61,19 @@ const removeFromStack = (technology : Technology)=> {
     <>
     <Nav/>
      <Banner/>
-
-
-     <main className="px-6  py-14">
-      <div className="mx-auto max-w-205">
-     <div className="grid grid-cols-[1fr_190px] gap-5">
+     <main>
+     <div className="grid grid-cols-1 lg:grid-cols-[1fr_190px]">
 
       <Technologies 
       stack={stack}
       onAdd={addToStack}/>
      
+   
       
       <Stack
       stack={stack}
       onRemove={removeFromStack}
-      onRemoveAll={removeAll}/></div></div>
-      </main>
+      onRemoveAll={removeAll}/></div></main>
       < ToastContainer
       position="top-right"
       autoClose={2500}/>
