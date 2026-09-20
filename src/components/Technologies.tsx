@@ -40,7 +40,7 @@ const Technologies = ({ stack, onAdd,} : TechnoProps)=> {
     </h2>
     <p className="mt-1 text-[11px] text-[#667085]">Pick one technology per category to build your ideal stack.</p>
 </div>
-<div className="grid grid-cols-1 gap-y-5 gap-x-15  sm:grid-cols-2 lg:grid-cols-3">
+<div className="grid grid-cols-1 gap-y-5 gap-x-10  sm:grid-cols-2 lg:grid-cols-3">
 
     {technologies.map((technology)=>(
         <TechCard

@@ -19,7 +19,7 @@ const TechCard =({technology, onAdd, isAdded,}:TechnoCardProps) => {
    
     
 return (
-    <div className="flex flex-col w-64  rounded-2xl border border-[#EAECF0] bg-white p-4 shadow-sm">
+    <div className="flex flex-col w-63  rounded-xl border border-[#EAECF0] bg-white p-4 shadow-sm">
         {/* top */}
         <div className="flex items-start justify-between">
 {/* icon */}
