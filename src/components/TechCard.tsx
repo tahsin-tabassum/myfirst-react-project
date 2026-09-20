@@ -45,7 +45,7 @@ return (
 <img src={technology.icon} alt={technology.name} className="h-12 w-8 object-contain"/>
 
 {/* badge */}
-<span className={`inline-block rounded-full border-1  px-4 py-1 text-sm font-medium  ${badgeColors[technology.badge] || "bg-gray-100 text-gray-600"} `}>{technology.badge}</span>
+<span className={`inline-block rounded-full border px-4 py-1 text-sm font-medium  ${badgeColors[technology.badge] || "bg-gray-100 text-gray-600"} `}>{technology.badge}</span>
         </div>
 
         {/* name */}
@@ -71,7 +71,7 @@ return (
 
         onClick={()=> onAdd(technology)}
         disabled={isAdded}
-         className={`mt-2 w-full rounded-md py-2 text-[8px] font-medium text-white transition
+         className={`mt-4 w-full  rounded-md py-2 text-sm font-medium text-white transition
             ${isAdded
             ? 'cursor-not-allowed bg-[#98A2B3]'
             : "bg-[#080D1A] hover:bg-[#1D2939]"}`}>
