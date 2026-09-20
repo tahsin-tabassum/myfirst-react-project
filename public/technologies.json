@@ -1,5 +1,5 @@
 
-  [
+ [
   {
     "id": 1,
     "name": "React",
@@ -34,11 +34,11 @@
     "id": 4,
     "name": "Next.js",
     "category": "Frontend",
-    "description": "The React framework for fast full-stack web applications with hybrid static and server rendering.",
+    "description": "The React framework for full-stack web applications with hybrid static and server rendering.",
     "icon": "https://cdn.simpleicons.org/nextdotjs/000000",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Popular"
+    "badge": "SSR / Edge"
   },
   {
     "id": 5,
@@ -84,7 +84,7 @@
     "id": 9,
     "name": "TypeScript",
     "category": "Language",
-    "description": "A strongly typed superset of JavaScript that adds static typing and better tooling.",
+    "description": "A strongly typed superset of JavaScript that builds on JavaScript for robust tooling.",
     "icon": "https://cdn.simpleicons.org/typescript/3178C6",
     "rating": 4.9,
     "difficulty": "Intermediate",
@@ -94,7 +94,7 @@
     "id": 10,
     "name": "Java",
     "category": "Language",
-    "description": "A secure, object-oriented programming language designed for portability and scalability.",
+    "description": "A secure, object-oriented programming language designed for portability and scale.",
     "icon": "https://cdn.simpleicons.org/java/ED8B00",
     "rating": 4.6,
     "difficulty": "Intermediate",
@@ -124,7 +124,7 @@
     "id": 13,
     "name": "Git",
     "category": "Tools",
-    "description": "A distributed version control system for tracking changes and collaborating on projects.",
+    "description": "A distributed version control system for tracking changes and collaborating on code.",
     "icon": "https://cdn.simpleicons.org/git/F05032",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
@@ -144,7 +144,7 @@
     "id": 15,
     "name": "Postman",
     "category": "Tools",
-    "description": "An API development and testing platform for building and working with APIs.",
+    "description": "An API development and testing platform for building and testing APIs.",
     "icon": "https://cdn.simpleicons.org/postman/FF6C37",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
