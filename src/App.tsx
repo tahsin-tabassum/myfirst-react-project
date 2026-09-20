@@ -4,11 +4,11 @@ import {toast, ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Nav from "./components/Nav";
-
 import Banner from "./components/Banner";
-// import TechCard from "./components/TechCard";
 import Technologies from "./components/Technologies";
 import Stack from "./components/Stack";
+
+
 interface Technology {
     id: number;
     name: string;
@@ -61,18 +61,22 @@ const removeFromStack = (technology : Technology)=> {
     <>
     <Nav/>
      <Banner/>
-     <div className="grid grid-cols-1 gap-8 px-8 py-10 lg:grid-cols-[1fr_320px]">
+
+
+     <main className="px-6  py-14">
+      <div className="mx-auto max-w-205">
+     <div className="grid grid-cols-[1fr_190px] gap-5">
 
       <Technologies 
       stack={stack}
       onAdd={addToStack}/>
      
-    {/* <TechCard technology ="React" onAdd={() => {}} /> */}
       
       <Stack
       stack={stack}
       onRemove={removeFromStack}
-      onRemoveAll={removeAll}/></div>
+      onRemoveAll={removeAll}/></div></div>
+      </main>
       < ToastContainer
       position="top-right"
       autoClose={2500}/>
