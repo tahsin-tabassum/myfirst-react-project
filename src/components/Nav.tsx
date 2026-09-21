@@ -5,7 +5,7 @@ const Nav =() => {
    
     
 return (
-    <nav className="border-b border-gray-200 bg-white">
+    <nav className="sticky top-0 z-50 border-b border-gray-200 bg-white">
 
     <div className=" relative flex items-center justify-between px-8 py-4 md:px-8">
 
