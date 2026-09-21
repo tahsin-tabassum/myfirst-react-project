@@ -22,12 +22,16 @@ interface TechnoProps {
 
 const Technologies = ({ stack, onAdd,} : TechnoProps)=> {
     const [technologies, setTechnologies] = useState<Technology []>([]);
+const [loading, setLoading] = useState(true);
 
     useEffect(()=>
     {
         fetch("/public/technologies.json")
         .then((response)=> response.json())
-        .then((data)=> setTechnologies(data));
+        .then((data)=>{ setTechnologies(data);
+    setLoading(false)});
+
+
     },[]);
     
     
@@ -40,6 +44,12 @@ const Technologies = ({ stack, onAdd,} : TechnoProps)=> {
     
     <p className="py-3 text-md text-[#667085]">Pick one technology per category to build your ideal stack.</p>
 </div>
+{/* loading state */}
+{loading ? (
+    <div className="flex min-h[300px] items-center justify-center">
+<p className="text-sm text-gray-500"> Loading technologies...</p>
+    </div>
+): (
 <div className="grid grid-cols-1 gap-y-5 gap-x-7 sm:grid-cols-2 lg:grid-cols-3">
 
     {technologies.map((technology)=>(
@@ -50,7 +60,8 @@ const Technologies = ({ stack, onAdd,} : TechnoProps)=> {
         isAdded={stack.some((item)=> item.id === technology.id)}
         />
     ))}
-</div>
+</div> )}
+
         </section>
     );
 };
