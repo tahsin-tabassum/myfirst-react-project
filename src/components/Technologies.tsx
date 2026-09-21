@@ -26,7 +26,7 @@ const [loading, setLoading] = useState(true);
 
     useEffect(()=>
     {
-        fetch("/public/technologies.json")
+        fetch("/technologies.json")
         .then((response)=> response.json())
         .then((data)=>{ setTechnologies(data);
     setLoading(false)});
