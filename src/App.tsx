@@ -7,6 +7,7 @@ import Nav from "./components/Nav";
 import Banner from "./components/Banner";
 import Technologies from "./components/Technologies";
 import Stack from "./components/Stack";
+import Footer from "./components/Footer";
 
 
 interface Technology {
@@ -75,6 +76,7 @@ const removeFromStack = (technology : Technology)=> {
       < ToastContainer
       position="top-right"
       autoClose={2500}/>
+      <Footer />
     </>
   )
 };
